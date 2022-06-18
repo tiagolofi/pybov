@@ -1,0 +1,30 @@
+[
+  {
+    "description": "A Totvs \u00e9 uma empresa que atua com softwares de gest\u00e3o empresarial. Na Am\u00e9rica Latina possui aproximadamente 30% de market share do segmento. Atua principalmente no Brasil, mas est\u00e1 presente em 41 pa\u00edses, com uma receita l\u00edquida, em 2018, de R$2,3 bilh\u00f5es.",
+    "max_": 25.01,
+    "min_": 23.85,
+    "name": "Totvs",
+    "open_": 24.95,
+    "price": 24.41,
+    "spread_max_min": 1.16,
+    "spread_price_open": -0.54,
+    "symbol": "TOTS3",
+    "timestamp": 1655571503,
+    "type_": "ACAO",
+    "variation": -0.0216
+  },
+  {
+    "description": "A Totvs \u00e9 uma empresa que atua com softwares de gest\u00e3o empresarial. Na Am\u00e9rica Latina possui aproximadamente 30% de market share do segmento. Atua principalmente no Brasil, mas est\u00e1 presente em 41 pa\u00edses, com uma receita l\u00edquida, em 2018, de R$2,3 bilh\u00f5es.",
+    "max_": 25.01,
+    "min_": 23.85,
+    "name": "Totvs",
+    "open_": 24.95,
+    "price": 24.41,
+    "spread_max_min": 1.16,
+    "spread_price_open": -0.54,
+    "symbol": "TOTS3",
+    "timestamp": 1655571507,
+    "type_": "ACAO",
+    "variation": -0.0216
+  }
+]
