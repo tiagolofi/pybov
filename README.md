@@ -1,7 +1,7 @@
 
 # Infos sobre a Bolsa Brasileira
 
-Webscrapping das informações do site do Invest***
+Webscrapping das informações do site do Infomo***
 
 Apreciem.
 
