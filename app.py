@@ -11,7 +11,7 @@ app = Flask(__name__)
 spec = FlaskPydanticSpec(
 	'flask',
 	version='v1', 
-	title = 'API de Coleta de Preços da Bolsa em Tempo Real',
+	title = 'API de Coleta de Preços da Bolsa em Tempo Real'
 )
 spec.register(app)
 

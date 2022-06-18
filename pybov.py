@@ -3,7 +3,7 @@ from monitoring import Monitoring
 
 while True:
 
-	name = input('Nome e ticker da empresa:\n')
+	nome = input('Nome e ticker da empresa:\n')
 
 	tipo = input('Tipo ("acao" ou "bdr"):\n')
 
@@ -15,7 +15,7 @@ while True:
 	
 	preco = round(float(input('Preço Alvo:\n')), 2)
 
-	m = Monitoring(interval = intervalo, n_query = n_query, name = name, type_ = tipo)
+	m = Monitoring(interval = intervalo, n_query = n_query, name = nome, type_ = tipo)
 
 	m.delete_m()
 
