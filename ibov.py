@@ -2,6 +2,7 @@
 from bs4 import BeautifulSoup
 from requests import get
 from re import findall, sub
+from datetime import datetime
 
 class Ibov(object):
 
@@ -36,32 +37,32 @@ class Ibov(object):
 			return soup
 
 	def get_info(self):
-
-		data = self.connecting()
-
-		table = data.select('.tables table td')
-
+		
 		try:
+
+			data = self.connecting()
+
+			table = data.select('.tables table td')
 
 			self.parse_numbers_table(table[3])
 			
 			desc = data.select_one('.tables .description p').text
 	
 			infos = {
+				'timestamp': int(datetime.now().timestamp()),
 				'name': sub('-', ' ', self.name.rsplit('-', 1)[0].title()),
 				'type_': self.type_.upper(),
 				'symbol': self.name.rsplit('-', 1)[1].upper(),
-				'desc': desc,
+				'description': desc,
 				'price': self.parse_numbers(data.select('.value p')),
 				'open_': self.parse_numbers_table(table[3]),
-				'close_': self.parse_numbers_table(table[1]),
 				'min_': self.parse_numbers(data.select('.minimo p')),
 				'max_': self.parse_numbers(data.select('.maximo p'))
 			}
 	
-			infos['spread'] = round(infos['max_'] - infos['min_'], 2)
-			infos['var'] = round((infos['close_']/infos['open_'])-1, 4)
-			infos['h'] = round(infos['close_'] - infos['open_'], 2)
+			infos['spread_max_min'] = round(infos['max_'] - infos['min_'], 2)
+			infos['variation'] = round((infos['price']/infos['open_'])-1, 4)
+			infos['spread_price_open'] = round(infos['price'] - infos['open_'], 2)
 	
 			return infos
 

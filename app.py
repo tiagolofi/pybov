@@ -21,18 +21,18 @@ class ErrorMessage(BaseModel):
 	error: str
 
 class Infos(BaseModel):
+	timestamp: Optional[int] = None
 	name: Optional[str] = None
 	type_: Optional[str] = None
 	symbol: Optional[str] = None
-	desc: Optional[str] = None
+	description: Optional[str] = None
 	price: Optional[float] = None
 	open_: Optional[float] = None
-	close_: Optional[float] = None
 	min_: Optional[float] = None
 	max_: Optional[float] = None
-	spread: Optional[float] = None
-	var: Optional[float] = None
-	h: Optional[float] = None
+	spread_max_min: Optional[float] = None
+	variation: Optional[float] = None
+	spread_price_open: Optional[float] = None
 
 # recursos
 
